@@ -1,4 +1,3 @@
-import { Prisma } from "@prisma/client";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { array, object, string } from "yup";
 import { categories, difficulties, types } from "../../../data";

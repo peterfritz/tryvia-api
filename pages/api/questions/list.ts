@@ -1,4 +1,3 @@
-import { Prisma } from "@prisma/client";
 import type { NextApiRequest, NextApiResponse } from "next";
 import NextCors from "nextjs-cors";
 import jwt from "jsonwebtoken";
@@ -63,11 +62,10 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
             }
           }
 
-          const questions: Question[] = await prisma.$queryRaw(
-            Prisma.sql`SELECT * FROM Question ORDER BY RAND() LIMIT ${Number(
+          const questions: Question[] =
+            await prisma.$queryRaw`SELECT * FROM Question ORDER BY RAND() LIMIT ${Number(
               amount
-            )};`
-          );
+            )};`;
 
           res.status(200).json({
             response_code: 0,
