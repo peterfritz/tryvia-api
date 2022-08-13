@@ -77,7 +77,7 @@ const Home: NextPage = () => {
           onSubmit={(e) => handleSubmit(e)}
         >
           <LoadingOverlay visible={loading} overlayBlur={1} color="dark" />
-          {/* Se você está vendo isso saiba que é um protótipo e pretendo corrigir ainda hoje 😳 */}
+          {/* Se você está vendo isso saiba que é um protótipo e pretendo melhorá-lo um pouco 😳 */}
           <label className="flex flex-col gap-1">
             <span className="text-sm">Pergunta</span>
             <input
@@ -175,8 +175,11 @@ const Home: NextPage = () => {
         </form>
       </main>
 
-      <footer className="w-full fixed flex flex-row-reverse items-center gap-5 px-5 py-3 left-0 right-0 bottom-0">
-        <a className="text-xl" href="https://github.com/peterfritz/tryvia-api">
+      <footer className="w-full fixed flex flex-row-reverse items-center gap-5 px-5 py-3 left-0 right-0 bottom-0 pointer-events-none">
+        <a
+          className="text-xl pointer-events-auto"
+          href="https://github.com/peterfritz/tryvia-api"
+        >
           <span aria-hidden>
             <FaGithub />
           </span>
