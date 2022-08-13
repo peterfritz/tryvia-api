@@ -53,7 +53,7 @@ const Home: NextPage = () => {
   return (
     <div className="h-full px-3 py-5">
       <Head>
-        <title>TryviaAPI</title>
+        <title>Tryvia API</title>
         <meta
           name="description"
           content="API feita para o projeto Trivia da Trybe"
