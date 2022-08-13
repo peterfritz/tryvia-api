@@ -86,7 +86,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
               String(process.env.SECRET_KEY)
             );
 
-            if (typeof tokenData !== "object" || tokenData.id) {
+            if (typeof tokenData !== "object" || !tokenData.id) {
               return res.status(200).json({
                 response_code: 3,
                 results: [],
