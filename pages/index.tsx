@@ -11,7 +11,7 @@ import { categories } from "../data";
 const Home: NextPage = () => {
   const [loading, setLoading] = useState(false);
   const [questionText, setQuestionText] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+  const [selectedCategory, setSelectedCategory] = useState(categories[0].name);
   const [selectedType, setSelectedType] = useState("multiple");
   const [selectedDifficulty, setSelectedDifficulty] = useState("easy");
   const [correctAnswer, setCorrectAnswer] = useState("");
@@ -95,9 +95,9 @@ const Home: NextPage = () => {
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
             >
-              {categories.map((category) => (
-                <option value={category} key={category}>
-                  {category}
+              {categories.map(({ id, name }) => (
+                <option value={name} key={id}>
+                  {name}
                 </option>
               ))}
             </select>

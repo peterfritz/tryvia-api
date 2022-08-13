@@ -1,5 +1,4 @@
 <hr />
-<br />
 
 <div align="center">
   <h1>Tryvia API</h1>
@@ -8,7 +7,7 @@
 
 <div align="center">
 <a href="#">
-  <img src="public/logo.svg" alt="Tryvia API logo" height="100" >
+  <img src="public/logo_dark.svg" alt="Tryvia API logo" height="100" >
 </a>
 </div>
 

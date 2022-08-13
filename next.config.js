@@ -12,6 +12,10 @@ const nextConfig = {
         source: '/api_token.php',
         destination: '/api/token/create',
       },
+      {
+        source: '/api_category.php',
+        destination: '/api/categories/list',
+      },
     ]
   },
 }

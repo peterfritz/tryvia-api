@@ -4,7 +4,9 @@ import { categories, difficulties, types } from "../../../data";
 import prisma from "../../../lib/prisma";
 
 const questionSchema = object({
-  category: string().oneOf(categories).required(),
+  category: string()
+    .oneOf(categories.map((c) => c.name))
+    .required(),
   type: string().oneOf(types).required(),
   difficulty: string().oneOf(difficulties).required(),
   question: string().required(),
