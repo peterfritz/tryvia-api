@@ -6,7 +6,7 @@ import { NextRequest } from "next/server";
 
 export const runtime: RouteSegmentConfig["runtime"] = "edge";
 
-export const POST = async (request: NextRequest) => {
+export const GET = async (request: NextRequest) => {
   const { searchParams } = request.nextUrl;
 
   const command = searchParams.get("command");
