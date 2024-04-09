@@ -2,29 +2,30 @@
 
 <div align="center">
   <h1>Tryvia API</h1>
-  <p>Uma API que te traz perguntas rápido e em português.</p>
+  <p>Uma API que te traz perguntas em português de forma rápida.</p>
 </div>
 
 <div align="center">
-  <a href="#">
-    <img src="public/logo_dark.svg" alt="Tryvia API logo" height="100" >
-  </a>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./public/logo_dark.svg">
+    <img alt="Tryvia API logo" src="./public/logo.svg"  height="100">
+  </picture>
 </div>
 
 <hr />
 
 <div align="center">
-  <img src="https://img.shields.io/badge/TYPESCRIPT-000000?style=for-the-badge&logo=TYPESCRIPT&logoColor=3178C6" />
-  <img src="https://img.shields.io/badge/VERCEL-000000?style=for-the-badge&logo=VERCEL&logoColor=FFFFFF" />
-  <img src="https://img.shields.io/badge/NEXT.JS-000000?style=for-the-badge&logo=NEXTDOTJS&logoColor=FFFFFF" />
-  <img src="https://img.shields.io/badge/PRISMA-000000?style=for-the-badge&logo=PRISMA&logoColor=FFFFFF" />
-  <img src="https://img.shields.io/badge/PLANETSCALE-000000?style=for-the-badge&logo=PLANETSCALE&logoColor=FFFFFF" />
-  <img src="https://img.shields.io/badge/TAILWIND%20CSS-000000?style=for-the-badge&logo=TAILWINDCSS&logoColor=06B6D4" />
+  <img alt="Typescript" src="https://img.shields.io/badge/TYPESCRIPT-000000?style=for-the-badge&logo=TYPESCRIPT&logoColor=3178C6" />
+  <img alt="Vercel" src="https://img.shields.io/badge/VERCEL-000000?style=for-the-badge&logo=VERCEL&logoColor=FFFFFF" />
+  <img alt="Next.js" src="https://img.shields.io/badge/NEXT.JS-000000?style=for-the-badge&logo=NEXTDOTJS&logoColor=FFFFFF" />
+  <img alt="Turso" src="https://img.shields.io/badge/TURSO-000000?style=for-the-badge&logo=TURSO&logoColor=4FF8D2" />
+  <img alt="Drizzle" src="https://img.shields.io/badge/DRIZZLE-000000?style=for-the-badge&logo=DRIZZLE&logoColor=C5F74F" />
 </div>
 
 <br />
 
 ## Como usar?
+
 Essa API é totalmente compatível com a [Open Trivia Database](https://opentdb.com/).
 
 `https://tryvia.ptr.red/api_category.php` - Lista todas as categorias disponíveis e seus respectivos ids.
