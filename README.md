@@ -8,7 +8,7 @@
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./public/logo_dark.svg">
-    <img alt="Tryvia API logo" src="./public/logo.svg"  height="100">
+    <img alt="Tryvia API logo" src="./public/logo_light.svg"  height="100">
   </picture>
 </div>
 
