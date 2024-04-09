@@ -4,11 +4,6 @@ require("dotenv").config({ path: "./.env.local" });
 const fs = require("fs");
 const crypto = require("crypto");
 
-const jiti = require("jiti")(__filename);
-
-jiti("../src/env/client.ts");
-jiti("../src/env/server.ts");
-
 /** Define uma váriavel de ambiente usada para gerar tokens. */
 const setSecretKey = () => {
   // Checa se já existe uma variável de ambiente chamada SECRET_KEY
@@ -22,11 +17,18 @@ const setSecretKey = () => {
   const newServerSecret = crypto.randomBytes(42).toString("hex");
 
   // Grava a SECRET_KEY em um arquivo .env
-  fs.appendFile(".env", `SECRET_KEY=${newServerSecret}\r\n`, (err) => {
-    if (err) throw err;
+  fs.writeFile(
+    ".env",
+    `SECRET_KEY="${newServerSecret}"\r\n`,
+    { flag: "a" },
+    (err) => {
+      if (err) throw err;
 
-    console.log("\nSECRET_KEY set\n");
-  });
+      console.log("\nSECRET_KEY set\n");
+    }
+  );
+
+  process.env.SECRET_KEY = newServerSecret;
 };
 
 const main = async () => {
